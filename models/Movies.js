@@ -24,7 +24,7 @@ const schema = new mongoose.Schema({
     required: true,
   },
   posters: {
-    type: String,
+    type: [String],
     default: "0",
   },
   language: {
@@ -36,6 +36,14 @@ const schema = new mongoose.Schema({
     required: true,
   },
   rating: {
+    type: String,
+    required: true,
+  },
+  imdb: {
+    type: String,
+    required: true,
+  },
+  About: {
     type: String,
     required: true,
   },
