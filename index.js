@@ -3,7 +3,6 @@ const express = require("express");
 const httpErrors = require("http-errors");
 const pino = require("pino");
 const pinoHttp = require("pino-http");
-const movieRouter = require("./movieRoutes/movieRoutes");
 
 // Middleware to parse JSON request body
 
