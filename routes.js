@@ -4,6 +4,7 @@ require("./utils/dbConnection");
 const cors = require("cors");
 const movieRouter = require("./movieRoutes/movieRoutes");
 const theaterRouter = require("./theaterRouter/theaterRoutes");
+const seatsRouter = require("./seatsRoutes/seatRouter");
 const express = require("express");
 module.exports = function (app, opts) {
   // Setup routes, middleware, and handlers
@@ -16,4 +17,5 @@ module.exports = function (app, opts) {
   app.use(express.json());
   app.use("/api", movieRouter);
   app.use("/theater", theaterRouter);
+  app.use("/seats", seatsRouter);
 };
