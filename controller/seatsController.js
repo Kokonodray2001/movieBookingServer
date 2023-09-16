@@ -33,7 +33,7 @@ exports.checkSeats = async (req, res, next) => {
     const filter = req.query;
     const response = await bookedSeats.findOne(filter);
     if (response == null) res.send(false);
-    else res.send(true);
+    else res.send(response);
   } catch {
     next(httpErrors(404, `error ${error}`));
   }

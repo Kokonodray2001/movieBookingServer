@@ -6,6 +6,7 @@ const movieRouter = require("./movieRoutes/movieRoutes");
 const theaterRouter = require("./theaterRouter/theaterRoutes");
 const seatsRouter = require("./seatsRoutes/seatRouter");
 const express = require("express");
+
 module.exports = function (app, opts) {
   // Setup routes, middleware, and handlers
   app.use(
@@ -18,4 +19,7 @@ module.exports = function (app, opts) {
   app.use("/api", movieRouter);
   app.use("/theater", theaterRouter);
   app.use("/seats", seatsRouter);
+  app.get("/hello", async (req, res) => {
+    res.send("hello");
+  });
 };
